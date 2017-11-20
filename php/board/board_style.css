@@ -1,0 +1,21 @@
+
+td  { font-size : 9pt;   }
+A:link  { font : 9pt;   color : dimgray;  text-decoration : none; font-size : 9pt;  }
+A:visited  {   text-decoration : none; color : dimgray; font-size : 9pt;  }
+A:hover  {  text-decoration : none; color : dimgray; font-size : 9pt;  }
+
+.box {
+Background-color:white; 
+Border:1x SOLID rgb(233, 233, 45);
+font-size:9pt;
+}
+
+.submit	{
+background-color:white;
+padding-top:0; padding-right:0; padding-bottom:0; padding-left:0;
+border-width:1;
+border-color:rgb(201,201,201);
+border-style:solid;
+font-size:8pt;
+color:dimgray;
+}
