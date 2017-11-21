@@ -14,6 +14,8 @@ $mother = $_REQUEST["mother"];
 $step = $_REQUEST["step"];
 $file = $_FILES['upfile'];
 $remote_ip = $_SERVER['REMOTE_ADDR'];
+$upfile_type = $file["type"];
+$upfile_size = $file["szie"];
 
 if ($name == '' || $comment == '' || $passwd == '' || $subject == '')	{
 ?>

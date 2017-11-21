@@ -15,6 +15,8 @@ $mother = $_REQUEST["mother"];
 $step = $_REQUEST["step"];
 $file = $_FILES['upfile'];
 $remote_ip = $_SERVER['REMOTE_ADDR'];
+$upfile_size = $file["size"];
+$upfile_type = $file["type"];
 
 if ($comment == '' || $passwd == '' || $subject == '')	{
 echo ("
@@ -44,20 +46,23 @@ $row=mysql_fetch_array($result);
 	$dbup = "update $board set name='$name',subject='$subject',html='$html',email='$email',homepage='$homepage',comment='$comment' where id=$id";
 	$result=mysql_query($dbup, $db);
 
-			if ($del_file)	{
-			unlink("..//..//data//$row[upfile_name]");
+		if ($del_file)	{
+			unlink("..//data//$row[upfile_name]");
 			$dbup = "update $board set upfile_name='',upfile_size='',upfile_type='' where id=$id";
 			$result=mysql_query($dbup, $db);
-			}
-			
-			if ($upfile_size > 0)	{
-			unlink("..//..//data//$row[upfile_name]");
+		}
+		
+		if ($upfile_size > 0)	{
+			unlink("..//data//$row[upfile_name]");
 			$a = date("dms");
 			$upfile_name = $a.$upfile_name;
 			$dbup = "update $board set upfile_name='$upfile_name',upfile_size='$upfile_size',upfile_type='$upfile_type' where id=$id";
 			$result=mysql_query($dbup, $db);
-			copy($upfile,"..//..//data//$upfile_name");
-			}
+			if(move_uploaded_file($_FILES["upfile"]["tmp_name"], "..//data//$upfile_name"))
+				echo "success";
+			else
+				die("fail2");
+		}
 	
 	}	else	{
 	

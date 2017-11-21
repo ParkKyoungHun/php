@@ -21,7 +21,7 @@ $row=mysql_fetch_array($result);
   $result=mysql_query($dbdel, $db);
 
 	if ($row[upfile_name])	{
-	unlink("..//..//data//$row[upfile_name]");
+	unlink("..//data//$row[upfile_name]");
 	}
 	
  } else  {
@@ -35,6 +35,5 @@ $row=mysql_fetch_array($result);
  }
 
 echo ("<meta http-equiv='Refresh' content='0; URL=list.php?board=$board'>");
-
 ?>
 
