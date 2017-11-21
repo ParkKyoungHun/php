@@ -7,13 +7,12 @@ $id = $_REQUEST["id"];
 ?>
 <html>
 <head>
-<title><? echo $title_name ?></title>
+<title>게시글수정</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="STYLESHEET" type="text/css" href="board_style.js.css">
 <script language="javascript" src="board_script.js"></script>
 </head>
 <?
-
 $result=mysql_query("select * from $board where id=$id");
 $row=mysql_fetch_array($result);
 $name=htmlspecialchars($row[name]);

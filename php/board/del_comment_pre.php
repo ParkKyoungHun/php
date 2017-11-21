@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>커멘스 삭제</title>
+<title>커멘드 삭제</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style>
 td  { font-size : 9pt;   }
@@ -50,8 +50,7 @@ function WriteCheck(){
     </tr>
     <tr>
         <td width="298" bgcolor="gray" height="21">
-            <p align="right"><font size="2" face="돋움" color="white">&nbsp;
-            Copyright ⓒ <a href=http://tozigy.com target=_blank>Tozigy.com</a>. All right for Tozigy.</font></p>
+        &nbsp;
         </td>
     </tr></form>
 </table>

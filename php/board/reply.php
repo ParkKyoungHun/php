@@ -103,10 +103,7 @@ echo "Re:".$subject;
     </tr>
     <tr>
         <td bgcolor="<? echo $table_out ?>" height="21">
-            <p align="left">
-            <font size="1" face="굴림" color="white">&nbsp;
-            <a href="http://tozigy.com" target="_blank" style="font-size:8pt;color:white;">copyright ⓒ tozigy.com. All rights reserved.</a></font>
-            </p>
+		&nbsp;
         </td>
         <td bgcolor="<? echo $table_out ?>" height="21">
             <p align="left"><a href="write.php?board=<? echo $board ?>">write</a> 
