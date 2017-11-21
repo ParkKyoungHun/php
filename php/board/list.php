@@ -10,7 +10,7 @@ $keyword = $_REQUEST["keyword"];
 ?>
 <title>테스트 게시판</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="STYLESHEET" type="text/css" href="toziboard.css">
+<link rel="STYLESHEET" type="text/css" href="board_style.css">
 </head>
 <body>
 
@@ -73,7 +73,7 @@ while($row=mysql_fetch_array($result)){
 
 	echo "
 		<tr onMouseOver=this.style.backgroundColor='gainsboro' onMouseOut=this.style.backgroundColor='' onclick=self.location.href='read.php?board=$board&id=$id'>
-			<td align=center width=5%><font size=2 color=$list_font>$no</td>
+			<td align=center width=5%><font size=2 color=$list_font>$id</td>
 			<td width=61%>
 	";
 		

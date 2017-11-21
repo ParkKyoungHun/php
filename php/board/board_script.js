@@ -1,5 +1,5 @@
 
-function Write_Check()
+function board_script()
 {
   var passwd = $("#passwd").val().trim().length;
   var comment = $("#comment").val().trim().length;

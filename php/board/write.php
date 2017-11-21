@@ -14,7 +14,7 @@ $day = date("m/d");
 
 <body>
 <center>
-<form action=insert.php?board=<?=$board ?> method=post onSubmit="return Write_Check()" enctype="multipart/form-data">     
+<form action=insert.php?board=<?=$board ?> method=post onSubmit="return board_script()" enctype="multipart/form-data">     
 
 <table border="0" width="85%" style="border-width:1px; border-style:solid;" cellpadding="0" cellspacing="0" width="964">
     <tr>

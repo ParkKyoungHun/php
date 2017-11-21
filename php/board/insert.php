@@ -47,7 +47,10 @@ if ($file["type"] ==	'image/gif'  or $file["type"] == 'image/jpeg' or $file["typ
   $result=mysql_query($dbinsert, $db);
 
   if ($file["size"] > 0)	{
-    copy($upfile,"..//data//$upfile_name");
+    if(move_uploaded_file($_FILES["upfile"]["tmp_name"], "..//data//$upfile_name"))
+      echo "success";
+    else
+      die("fail2");
   }	
 
 }	else	{

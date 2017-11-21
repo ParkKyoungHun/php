@@ -1,10 +1,25 @@
 <?
 include "../inc/config.inc.php";
+$id = $_REQUEST["id"];
+$name = $_REQUEST["name"];
+$comment = $_REQUEST["comment"];
+$passwd = $_REQUEST["passwd"];
+$subject = $_REQUEST["subject"];
+$board = $_REQUEST["board"];
+$html = $_REQUEST["html"];
+$email = $_REQUEST["email"];
+$homepage = $_REQUEST["homepage"];
+$upfile_name = $_REQUEST["upfile_name"];
+$homepage = $_REQUEST["homepage"];
+$mother = $_REQUEST["mother"];
+$step = $_REQUEST["step"];
+$file = $_FILES['upfile'];
+$remote_ip = $_SERVER['REMOTE_ADDR'];
 
 if ($comment == '' || $passwd == '' || $subject == '')	{
 echo ("
 <script>
-	alert ('������ �����ϼ���.');
+	alert ('내용을 기입하세요.');
 	history.go(-1);
 </script>
 ");
@@ -48,7 +63,7 @@ $row=mysql_fetch_array($result);
 	
 	echo ("
   <script>
-  alert('��й�ȣ�� Ʋ�Ƚ��ϴ�.')
+  alert('비밀번호가 틀렸습니다. $passwd , $row[passwd]')
   history.go(-1)
   </script>
   ");
@@ -59,7 +74,7 @@ $row=mysql_fetch_array($result);
 }	else	{
 echo ("
   <script>
-  alert('���Ͼ��ε�� �׸����ϸ� �����մϴ�.')
+  alert('파일업로드는 그림파일만 가능합니다.')
   history.go(-1)
   </script>	");
 

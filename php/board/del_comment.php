@@ -1,6 +1,9 @@
 <?
-
 include "../inc/config.inc.php";
+$board = $_REQUEST["board"];
+$id = $_REQUEST["id"];
+$main_id = $_REQUEST["main_id"];
+$passwd = $_REQUEST["passwd"];
 
 $result=mysql_query("select passwd from $board where id=$id", $db);
 $row=mysql_fetch_array($result);
@@ -20,7 +23,7 @@ $row=mysql_fetch_array($result);
  } else  {
  echo ("
   <script>
-  alert('��й�ȣ�� Ʋ�Ƚ��ϴ�.')
+  alert('비밀번호가 틀렸습니다.')
   history.go(-1)
   </script>
   ");

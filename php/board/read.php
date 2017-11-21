@@ -134,11 +134,11 @@ if ($row[email])	{
 <?
 if ($row[upfile_name])	{
 	$tmp_file_name = substr ("$row[upfile_name]",6);
-	echo ("<br>첨부파일 : <a href=../../data/$row[upfile_name]>$tmp_file_name</a>");
+	echo ("<br>첨부파일 : <a href=../data/$row[upfile_name]>$tmp_file_name</a>");
 }
 
 if ( $row[upfile_type] ==	'image/gif'  or $row[upfile_type] == 'image/pjpeg' or $row[upfile_type] == 'image/bmp' or $row[upfile_type] == 'image/x-png')	{
-	echo "<br><img src=../../data/$row[upfile_name]> ";	
+	echo "<br><img src=../data/$row[upfile_name]> ";	
 }
 ?>
 						</p>
@@ -189,11 +189,11 @@ while($row_comment=mysql_fetch_array($result)){
 					<td align=left >
 						<a href=list.php?board=<?=$board ?>>&nbsp;list</a> |
 						<a href=write.php?board=<?=$board ?>>write</a> |
-						<a href=reply.php?board=<?=$board ?>&id=<?=$row[id] ?>&mother=<?=$row[mother]?>&step=<?=$row[step]?>&sequence=<?=$row[sequence]?>>reply</a> |
+						<a href=reply.php?board=<?=$board ?>&id=<?=$id?>&mother=<?=$row[mother]?>&step=<?=$row[step]?>&sequence=<?=$row[sequence]?>>reply</a> |
 						<a href=edit.php?board=<?=$board ?>&id=<?=$id?>>edit</a> |
 					</td>
 					<td align=right >
-						<form action=del.php?board=<?=$board ?>&id=<?=$row[id]?> method=post name=del onSubmit='return Check()'>
+						<form action=del.php?board=<?=$board ?>&id=<?=$id?> method=post name=del onSubmit='return Check()'>
 							비번 : <input type=password name=passwd id="passwd" size=8 class=box>
 							<input type="submit" value="삭제">
 						</form>
